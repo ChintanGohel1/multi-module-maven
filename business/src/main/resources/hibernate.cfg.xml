@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+
+		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		<property name="connection.driver_class">oracle.jdbc.OracleDriver</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@192.168.0.67:1521/DEVB</property>
+		<property name="hibernate.connection.username">zopn_core_owner_r</property>
+		<property name="hibernate.connection.password">welcome</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.schemaName">zopn_core_owner_r</property>
+		<property name="hibernate.jpa.adapter.class">org.hibernate.dialect.Oracle10gDialect</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.use_sql_comments">false</property>
+	<!-- 	<property name="hibernate.connection.release_mode">after_transaction</property> -->
+	<!-- <property name="hibernate.current_session_context_class">jta</property> -->
+		<property name="hibernate.connection.maxPoolSize">15</property>
+		<property name="hibernate.connection.minPoolSize">5</property>
+
+		<mapping class="com.intech.rest.model.Student" />
+
+	</session-factory>
+</hibernate-configuration>
